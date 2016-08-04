@@ -27,21 +27,37 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
-// Author: wan@google.com (Zhanyong Wan)
+// Author: preston.a.jackson@gmail.com (Preston Jackson)
 //
-// Google C++ Mocking Framework (Google Mock)
+// Google Test - FrameworkSample
+// widget.cc
 //
-// This file #includes all Google Mock implementation .cc files.  The
-// purpose is to allow a user to build Google Mock by compiling this
-// file alone.
 
-// This line ensures that gmock.h can be compiled on its own, even
-// when it's fused.
-#include "gmock/gmock.h"
+// Widget is a very simple class used for demonstrating the use of gtest
 
-// The following lines pull in the real gmock *.cc files.
-#include "gmock-cardinalities.cc"
-#include "gmock-internal-utils.cc"
-#include "gmock-matchers.cc"
-#include "gmock-spec-builders.cc"
-#include "gmock.cc"
+#include "widget.h"
+
+Widget::Widget(int number, const std::string& name)
+    : number_(number),
+      name_(name) {}
+
+Widget::~Widget() {}
+
+float Widget::GetFloatValue() const {
+  return number_;
+}
+
+int Widget::GetIntValue() const {
+  return static_cast<int>(number_);
+}
+
+std::string Widget::GetStringValue() const {
+  return name_;
+}
+
+void Widget::GetCharPtrValue(char* buffer, size_t max_size) const {
+  // Copy the char* representation of name_ into buffer, up to max_size.
+  strncpy(buffer, name_.c_str(), max_size-1);
+  buffer[max_size-1] = '\0';
+  return;
+}

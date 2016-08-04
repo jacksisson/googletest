@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "76A15575C5B740800EF8E92EA66B97A276AEF659",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "76A15575C5B740800EF8E92EA66B97A276AEF659" : 0,
+    "36DC2C838A277D49939C67360003ED0FACA94FC3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F77AB979-1781-4F48-9ECE-04D204A8038E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "76A15575C5B740800EF8E92EA66B97A276AEF659" : "googletest\/",
+    "36DC2C838A277D49939C67360003ED0FACA94FC3" : "..\/.."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "gmock",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "googlemock\/xcode\/gmock.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.corp.adobe.com:Aviary\/cls-cpp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "36DC2C838A277D49939C67360003ED0FACA94FC3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:google\/googletest.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "76A15575C5B740800EF8E92EA66B97A276AEF659"
+    }
+  ]
+}

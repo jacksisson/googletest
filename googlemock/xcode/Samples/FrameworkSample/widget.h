@@ -27,21 +27,33 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
-// Author: wan@google.com (Zhanyong Wan)
+// Author: preston.a.jackson@gmail.com (Preston Jackson)
 //
-// Google C++ Mocking Framework (Google Mock)
+// Google Test - FrameworkSample
+// widget.h
 //
-// This file #includes all Google Mock implementation .cc files.  The
-// purpose is to allow a user to build Google Mock by compiling this
-// file alone.
 
-// This line ensures that gmock.h can be compiled on its own, even
-// when it's fused.
-#include "gmock/gmock.h"
+// Widget is a very simple class used for demonstrating the use of gtest. It
+// simply stores two values a string and an integer, which are returned via
+// public accessors in multiple forms.
 
-// The following lines pull in the real gmock *.cc files.
-#include "gmock-cardinalities.cc"
-#include "gmock-internal-utils.cc"
-#include "gmock-matchers.cc"
-#include "gmock-spec-builders.cc"
-#include "gmock.cc"
+#import <string>
+
+class Widget {
+ public:
+  Widget(int number, const std::string& name);
+  ~Widget();
+
+  // Public accessors to number data
+  float GetFloatValue() const;
+  int GetIntValue() const;
+
+  // Public accessors to the string data
+  std::string GetStringValue() const;
+  void GetCharPtrValue(char* buffer, size_t max_size) const;
+
+ private:
+  // Data members
+  float number_;
+  std::string name_;
+};

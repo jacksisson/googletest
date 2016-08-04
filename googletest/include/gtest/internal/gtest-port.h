@@ -1391,7 +1391,7 @@ inline To DownCast_(From* f) {  // so we only accept pointers
 template <class Derived, class Base>
 Derived* CheckedDowncastToActualType(Base* base) {
 #if GTEST_HAS_RTTI
-  GTEST_CHECK_(typeid(*base) == typeid(Derived));
+  GTEST_CHECK_(strcmp(typeid(*base).name(),typeid(Derived).name()) == 0);
 #endif
 
 #if GTEST_HAS_DOWNCAST_
